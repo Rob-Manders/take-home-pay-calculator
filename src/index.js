@@ -4,22 +4,17 @@ import './scss/index.scss'
 import showFrequencyMultiplier from './showFrequencyMultiplier'
 import { inputsValid } from './validateInput'
 
+import {
+	income,
+	incomeFrequency,
+	frequencyMultiplier,
+	pensionContribution,
+	calculateButton,
+	taxCodeDisplay
+} from './dom'
+
 import taxBands from './data/taxBands.json5'
 import niRates from './data/niRates.json5'
-
-const income = document.getElementById('income')
-const incomeFrequency = document.getElementById('incomeFrequency')
-const frequencyMultiplierContainer = document.getElementById('frequencyMultiplierContainer')
-const frequencyMultiplerLabel = document.getElementById('frequencyMultiplerLabel')
-const frequencyMultiplier = document.getElementById('frequencyMultiplier')
-const pensionContribution = document.getElementById('pensionContribution')
-const calculateButton = document.getElementById('calculateButton')
-
-const netPayDisplay = document.getElementById('netPay')
-const pensionPaidDisplay = document.getElementById('penstionPaid')
-const taxPaidDisplay = document.getElementById('taxPaid')
-const niPaidDisplay = document.getElementById('niPaid')
-const taxCodeDisplay = document.getElementById('taxCode')
 
 taxCodeDisplay.innerHTML = taxBands.defaultTaxCode
 

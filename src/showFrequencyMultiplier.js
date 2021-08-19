@@ -1,4 +1,9 @@
 
+import {
+	frequencyMultiplierContainer,
+	frequencyMultiplerLabel
+} from './dom'
+
 export default function showFrequencyMultiplier(selection) {
 	switch (selection) {
 		case 'daily':
