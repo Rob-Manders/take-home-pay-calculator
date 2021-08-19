@@ -1,8 +1,9 @@
 
 import './scss/index.scss'
 
-import showFrequencyMultiplier from './showFrequencyMultiplier'
-import { inputsValid } from './validateInput'
+import showFrequencyMultiplier from './js/showFrequencyMultiplier'
+import updateResults from './js/updateResultDisplay'
+import { inputsValid } from './js/validateInput'
 
 import {
 	income,
@@ -11,7 +12,7 @@ import {
 	pensionContribution,
 	calculateButton,
 	taxCodeDisplay
-} from './dom'
+} from './js/dom'
 
 import taxBands from './data/taxBands.json5'
 import niRates from './data/niRates.json5'
@@ -24,14 +25,13 @@ incomeFrequency.addEventListener('change', (event) => showFrequencyMultiplier(ev
 calculateButton.addEventListener('click', () => {
 	const inputs = [
 		income.value,
-		frequencyMultiplier.value,
 		pensionContribution.value
 	]
 
 	if (inputsValid(inputs)) {
 		console.log('Valid')
 
-
+		updateResults(1,2,3,4,5,6,7,8)
 
 
 	} else {

@@ -13,11 +13,11 @@
 		<h1>Take-Home Pay Calculator</h1>
 
 		<div class="input">
-			<label for="income">Gross income</label>
-			<input type="text" name="income" id="income">
+			<label class="input__label" for="income">Gross income</label>
+			<input class="input__text-box" type="text" name="income" id="income">
 
-			<label for="incomeFrquency">per</label>
-			<select name="incomeFrequency" id="incomeFrequency">
+			<label class="input__label" for="incomeFrquency">per</label>
+			<select class="input__drop-down" name="incomeFrequency" id="incomeFrequency">
 				<option value="annual">Year</option>
 				<option value="monthly">Month</option>
 				<option value="weekly">Week</option>
@@ -25,35 +25,38 @@
 				<option value="hourly">Hour</option>
 			</select>
 
-			<div class="frequency-multiplier" id="frequencyMultiplierContainer">
-				<label for="frequencyMultiplier" id="frequencyMultiplerLabel"></label>
-				<input type="text" name="frequencyMultiplier" id="frequencyMultiplier">
+			<div class="input__frequency-multiplier" id="frequencyMultiplierContainer">
+				<label class="input__label" for="frequencyMultiplier" id="frequencyMultiplerLabel"></label>
+				<input class="input__text-box" type="text" name="frequencyMultiplier" id="frequencyMultiplier">
 			</div>
 
-			<label for="pensionContribution">Pension Contribution</label>
-			<input type="text" name="pensionContribution" id="pensionContribution">
+			<label class="input__label" for="pensionContribution">Pension Contribution</label>
+			<input class="input__text-box" type="text" name="pensionContribution" id="pensionContribution">
 
-			<button id="calculateButton">Calculate</button>
+			<button class="input__button" id="calculateButton">Calculate</button>
 		</div>
 
 		<div class="output">
-			<p class="result-label">Net Pay</p>
-			<p class="result-display" id="netPay">£ -</p>
+			<p class="output__result--header">Monthly</p>
+			<p class="output__result--header">Yearly</p>
 
-			<p class="result-label">Pension</p>
-			<p class="result-display" id="pensionPaid">£ -</p>
+			<p class="output__result--label">Net Pay</p>
+			<p class="output__result--display" id="netPayMonth">£ -</p>
+			<p class="output__result--display" id="netPayYear">£ -</p>
 
-			<p class="result-label">Tax</p>
-			<p class="result-display" id="taxPaid">£ -</p>
+			<p class="output__result--label">Pension</p>
+			<p class="output__result--display" id="pensionPaidMonth">£ -</p>
+			<p class="output__result--display" id="pensionPaidYear">£ -</p>
 
-			<p class="result-label">National Insurance</p>
-			<p class="result-display" id="niPaid">£ -</p>
+			<p class="output__result--label">Tax</p>
+			<p class="output__result--display" id="taxPaidMonth">£ -</p>
+			<p class="output__result--display" id="taxPaidYear">£ -</p>
 
-			<p class="output-info">Assuming the standard tax code of <span id="taxCode"></span> and National Insurance category A. </span></p>
-		</div>
+			<p class="output__result--label">National Insurance</p>
+			<p class="output__result--display" id="niPaidMonth">£ -</p>
+			<p class="output__result--display" id="niPaidYear">£ -</p>
 
-		<div class="settings">
-
+			<p class="output__result--info">Assuming the standard tax code of <span id="taxCode"></span> and National Insurance category A. </span></p>
 		</div>
 	</div>
 
