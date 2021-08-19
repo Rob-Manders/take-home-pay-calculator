@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Take-Home Pay Calculator</title>
+</head>
+<body>
+	<noscript>Please enable JavaScript to run this application.</noscript>
+
+	<div class="container">
+		<h1>Take-Home Pay Calculator</h1>
+
+		<div class="input">
+			<label for="income">Gross income</label>
+			<input type="text" name="income" id="income">
+
+			<label for="incomeFrquency">per</label>
+			<select name="incomeFrequency" id="incomeFrequency">
+				<option value="annual">Year</option>
+				<option value="monthly">Month</option>
+				<option value="weekly">Week</option>
+				<option value="daily">Day</option>
+				<option value="hourly">Hour</option>
+			</select>
+
+			<div class="frequency-multiplier" id="frequencyMultiplierContainer">
+				<label for="frequencyMultiplier" id="frequencyMultiplerLabel"></label>
+				<input type="text" name="frequencyMultiplier" id="frequencyMultiplier">
+			</div>
+
+			<label for="pensionContribution">Pension Contribution</label>
+			<input type="text" name="pensionContribution" id="pensionContribution">
+
+			<button id="calculateButton">Calculate</button>
+		</div>
+
+		<div class="output">
+			<p class="result-label">Net Pay</p>
+			<p class="result-display" id="netPay">£ -</p>
+
+			<p class="result-label">Pension</p>
+			<p class="result-display" id="pensionPaid">£ -</p>
+
+			<p class="result-label">Tax</p>
+			<p class="result-display" id="taxPaid">£ -</p>
+
+			<p class="result-label">National Insurance</p>
+			<p class="result-display" id="niPaid">£ -</p>
+
+			<p class="output-info">Assuming the standard tax code of <span id="taxCode"></span> and National Insurance category A. </span></p>
+		</div>
+
+		<div class="settings">
+
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
