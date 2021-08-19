@@ -1,6 +1,6 @@
 
 export function validateInput(input) {
-	if (isNaN(input) || !input) return false
+	if (isNaN(input)) return false
 	else return true
 }
 

@@ -1,6 +1,7 @@
 
 import './scss/index.scss'
 
+import calculateAnnualIncome from './js/calculateAnnualIncome'
 import showFrequencyMultiplier from './js/showFrequencyMultiplier'
 import updateResults from './js/updateResultDisplay'
 import { inputsValid } from './js/validateInput'
@@ -28,10 +29,14 @@ calculateButton.addEventListener('click', () => {
 		pensionContribution.value
 	]
 
-	if (inputsValid(inputs)) {
-		console.log('Valid')
+	// Set any blank fields to zero.
+	if (income.value === '') income.value = '0'
+	if (frequencyMultiplier.value === '') frequencyMultiplier.value = '0'
+	if (pensionContribution.value === '') pensionContribution.value = '0'
 
-		updateResults(1,2,3,4,5,6,7,8)
+	if (inputsValid(inputs)) {
+		const annualIncome = calculateAnnualIncome()
+		console.log(annualIncome)
 
 
 	} else {
