@@ -1,4 +1,6 @@
 
+@use './abstracts/colours' as *;
+
 .output {
 	display: flex;
 	flex-direction: column;
@@ -7,16 +9,25 @@
 	&__result {
 		font-size: 2.25rem;
 		font-weight: 700;
+		color: $secondary;
 		margin: 1.5rem 0 0 0;
+
+		&::first-letter {
+			font-size: 1.75rem;
+			margin-right: 0.5rem;
+			color: $primary;
+		}
 	}
 
 	&__label {
 		margin: 0;
+		opacity: 0.7;
 	}
 
 	&__info {
 		font-size: 0.85rem;
 		text-align: center;
 		margin: 2.5rem 0 1.5rem 0;
+		opacity: 0.5;
 	}
 }

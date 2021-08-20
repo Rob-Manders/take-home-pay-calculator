@@ -1,11 +1,15 @@
 
+@use './abstracts/colours' as *;
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+	outline: none;
 }
 
 body {
 	font-family: 'Urbanist', sans-serif;
+	background-color: $background-darker;
 }
 

@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Take-Home Pay Calculator</title>
+	<title>Take-Home Pay</title>
 </head>
 <body>
 	<noscript>Please enable JavaScript to run this application.</noscript>
 
 	<div class="container">
-		<h1>Take-Home Pay Calculator</h1>
+		<h1>Take-Home Pay</h1>
 
 		<div class="input">
 			<label class="input__label" for="income">Gross income</label>
 			<input class="input__text-box" type="text" name="income" id="income">
 
-			<label class="input__label" for="incomeFrquency">per</label>
-			<select class="input__drop-down" name="incomeFrequency" id="incomeFrequency">
-				<option value="annual">Year</option>
-				<option value="monthly">Month</option>
-				<option value="weekly">Week</option>
-				<option value="daily">Day</option>
-				<option value="hourly">Hour</option>
-			</select>
+			<div class="input__income-frequency">
+				<label class="input__label" for="incomeFrequency">per</label>
+				<select class="input__drop-down" name="incomeFrequency" id="incomeFrequency">
+					<option value="annual">Year</option>
+					<option value="monthly">Month</option>
+					<option value="weekly">Week</option>
+					<option value="daily">Day</option>
+					<option value="hourly">Hour</option>
+				</select>
+			</div>
 
 			<div class="input__frequency-multiplier" id="frequencyMultiplierContainer">
 				<label class="input__label" for="frequencyMultiplier" id="frequencyMultiplerLabel"></label>
