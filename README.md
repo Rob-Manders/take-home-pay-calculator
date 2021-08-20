@@ -1,6 +1,6 @@
 # Take-Home Pay Calculator
 
-A simple calculator for working out basic pay with tax and national insurance contributions.
+A simple calculator for working out basic pay with tax, national insurance and pension contributions.
 
 
 ### Built with:
@@ -9,3 +9,7 @@ A simple calculator for working out basic pay with tax and national insurance co
 - Webpack
 - Sass
 - JSON5
+
+### Other Reasources
+
+- Font Awesome Icons: https://fontawesome.com/
