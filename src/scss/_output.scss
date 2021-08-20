@@ -1,0 +1,22 @@
+
+.output {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__result {
+		font-size: 2.25rem;
+		font-weight: 700;
+		margin: 1.5rem 0 0 0;
+	}
+
+	&__label {
+		margin: 0;
+	}
+
+	&__info {
+		font-size: 0.85rem;
+		text-align: center;
+		margin: 2.5rem 0 1.5rem 0;
+	}
+}
