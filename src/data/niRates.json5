@@ -1,37 +1,18 @@
+// NI rates are calculated on a weekly basis.
+// Last updated 20/08/2021.
+// Current rates: https://www.gov.uk/national-insurance-rates-letters
+
 {
-	low: {
-		band: {
-			lower: 520,
-			upper: 797
-		},
-		a: 0,
-		b: 0,
-		h: 0,
-		j: 0,
-		m: 0,
-		x: 0
+	lowRate: {
+		amount: 120,
+		rate: 0
 	},
-	medium: {
-		band: {
-			lower: 797.01,
-			upper: 4189
-		},
-		a: 12,
-		b: 2.85,
-		h: 12,
-		j: 2,
-		m: 12,
-		x: 2
+	mediumRate: {
+		amount: 184,
+		rate: 12
 	},
-	high: {
-		band: {
-			lower: 4189.01,
-		},
-		a: 2,
-		b: 2,
-		h: 2,
-		j: 2,
-		m: 2,
-		x: 2
+	highRate: {
+		amount: 967,
+		rate: 2
 	}
 }

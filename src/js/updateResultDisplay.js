@@ -1,22 +1,18 @@
 
 import {
-	netPayMonthDisplay,
-	netPayYearDisplay,
-	pensionPaidMonthDisplay,
-	pensionPaidYearDisplay,
-	taxPaidMonthDisplay,
-	taxPaidYearDisplay,
-	niPaidMonthDisplay,
-	niPaidYearDisplay		
+	incomeResultYear,
+	incomeResultMonth,
+	incomeResultWeek,
+	pensionResult,
+	taxResult,
+	niResult
 } from './dom'
 
-export default function updateResults(netPayMonth, netPayYear, pensionMonth, pensionYear, taxMonth, taxYear, niMonth, niYear) {
-	netPayMonthDisplay.innerHTML = netPayMonth
-	netPayYearDisplay.innerHTML = netPayYear
-	pensionPaidMonthDisplay.innerHTML = pensionMonth
-	pensionPaidYearDisplay.innerHTML = pensionYear
-	taxPaidMonthDisplay.innerHTML = taxMonth
-	taxPaidYearDisplay.innerHTML = taxYear
-	niPaidMonthDisplay.innerHTML = niMonth
-	niPaidYearDisplay.innerHTML = niYear
+export default function updateResults(netPay, pension, tax, ni) {
+	incomeResultYear.innerHTML = `£${Math.floor(netPay)}`
+	incomeResultMonth.innerHTML = `£${Math.floor(netPay / 12)}`
+	incomeResultWeek.innerHTML = `£${Math.floor(netPay / 52)}`
+	pensionResult.innerHTML = `£${Math.floor(pension)}`
+	taxResult.innerHTML = `£${Math.floor(tax)}`
+	niResult.innerHTML = `£${Math.floor(ni)}`
 }

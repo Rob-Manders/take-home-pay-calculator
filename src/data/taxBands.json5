@@ -1,19 +1,21 @@
+// Tax allowances and rates are calculated based on annual income.
+// Last updated 20/08/2021.
+// Tax bands and rates: https://www.gov.uk/income-tax-rates
+
 {
 	defaultTaxCode: '1257L',
 	personalAllowance: 12570,
-	noAllowanceOver: 125140,
+	allowanceCap: 125140,
 	basicRate: {
-		start: 12571,
-		end: 20270,
+		amount: 12570,
 		rate: 20
 	},
 	higherRate: {
-		start: 50271,
-		end: 150000,
+		amount: 50270,
 		rate: 40
 	},
 	additionalRate: {
-		start: 150001,
+		amount: 150000,
 		rate: 45
 	}
 }

@@ -2,6 +2,9 @@
 import './scss/index.scss'
 
 import calculateAnnualIncome from './js/calculateAnnualIncome'
+import calculateNI from './js/calculateNI'
+import calculatePension from './js/calculatePension'
+import calculateTax from './js/calculateTax'
 import showFrequencyMultiplier from './js/showFrequencyMultiplier'
 import updateResults from './js/updateResultDisplay'
 import { inputsValid } from './js/validateInput'
@@ -24,20 +27,22 @@ showFrequencyMultiplier(incomeFrequency.value)
 incomeFrequency.addEventListener('change', (event) => showFrequencyMultiplier(event.target.value))
 
 calculateButton.addEventListener('click', () => {
-	const inputs = [
-		income.value,
-		pensionContribution.value
-	]
-
 	// Set any blank fields to zero.
 	if (income.value === '') income.value = '0'
 	if (frequencyMultiplier.value === '') frequencyMultiplier.value = '0'
 	if (pensionContribution.value === '') pensionContribution.value = '0'
 
-	if (inputsValid(inputs)) {
+	// Check inputs are valid numbers before running calculations.
+	if (inputsValid([income.value, pensionContribution.value])) {
 		const annualIncome = calculateAnnualIncome()
-		console.log(annualIncome)
 
+		const tax = calculateTax(annualIncome, taxBands)
+		const pension = calculatePension(annualIncome, pensionContribution.value)
+		const ni = calculateNI(annualIncome, niRates)
+
+		const netPay = parseInt(annualIncome - (tax + pension + ni))
+
+		updateResults(netPay, pension, tax, ni)
 
 	} else {
 		console.log('Invalid Inputs')
