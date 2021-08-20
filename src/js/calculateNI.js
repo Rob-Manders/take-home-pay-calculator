@@ -24,5 +24,5 @@ export default function calculateNI(annualIncome, niRates) {
 	const mediumContribution = (mediumPortion / 100) * mediumRate.rate
 	const highContribution = (highPortion / 100) * highRate.rate
 
-	return lowContribution * mediumContribution + highContribution
+	return lowContribution + mediumContribution + highContribution
 }

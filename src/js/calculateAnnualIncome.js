@@ -18,7 +18,10 @@ export default function calculateAnnualIncome() {
 		case 'weekly':
 			annualIncome = income.value * 52
 			break
-		case 'daily' || 'weekly':
+		case 'daily':
+			annualIncome = (income.value * frequencyMultiplier.value) * 52
+			break
+		case 'hourly':
 			annualIncome = (income.value * frequencyMultiplier.value) * 52
 			break
 	}
